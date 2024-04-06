@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class ScenesController : MonoBehaviour
 {
 
-    public void BtnNextGameScene(){
+    public void BtnNextLogin(){
         SceneManager.LoadScene("Login");
     }
 

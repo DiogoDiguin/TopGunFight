@@ -28,6 +28,12 @@ public class AviaoGravidade : MonoBehaviour
             // Exibe uma mensagem no console
             Debug.Log("Gravidade ativada para o avião!");
         }
+
+        // Verifica se o avião colidiu com um objeto cubo
+        if (collision.gameObject.CompareTag("Bloco"))
+        {
+            aviaoRigidbody.useGravity = false;
+        }
     }
 
     private void Update()

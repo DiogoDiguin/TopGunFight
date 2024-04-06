@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8711276767729335952}
   - component: {fileID: 8505781818101094472}
   m_Layer: 0
-  m_Name: "Bala Avi\xE3o"
+  m_Name: BalaAviao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

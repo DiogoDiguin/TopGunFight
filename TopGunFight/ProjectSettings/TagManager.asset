@@ -8,6 +8,7 @@ TagManager:
   - Btn001
   - Btn002
   - Btn003
+  - Bloco
   layers:
   - Default
   - TransparentFX
