@@ -6,11 +6,6 @@ using UnityEngine;
 public class FocaNoAviao : MonoBehaviour
 {
     [Header("Configurações do avião")]
-    //public Transform aviao; // O objeto em movimento que queremos focar
-    //public Transform[] listaAviao;
-    /*[SerializeField] private Transform aviao001;
-    [SerializeField] private Transform aviao002;
-    [SerializeField] private Transform aviao003;*/
     [SerializeField] private GameObject GOaviao001;
     [SerializeField] private GameObject GOaviao002;
     [SerializeField] private GameObject GOaviao003;
@@ -54,18 +49,7 @@ public class FocaNoAviao : MonoBehaviour
     }
 
     private void Update()
-    {
-    /*
-        // Calcula a direção do objeto em movimento em relação a este objeto
-        Vector3 directionToTarget = aviao.position - transform.position;
-
-        // Calcula a rotação necessária para olhar para o objeto em movimento
-        Quaternion targetRotation = Quaternion.LookRotation(directionToTarget);
-
-        // Interpola suavemente a rotação atual para a rotação desejada
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, velocidadeRotacao * Time.deltaTime);
-    */
-        
+    {        
         VerificaAlturaDoAviao();
     }
 
@@ -75,7 +59,6 @@ public class FocaNoAviao : MonoBehaviour
 
         transform.LookAt(aviaoAtual);
         // Verifica se o avião está acima da altura mínima para atirar
-        // if (aviao001.position.y > transform.position.y || aviao002.position.y > transform.position.y || aviao003.position.y > transform.position.y)
         if (aviaoAtual.position.y > transform.position.y)
         {
             Debug.Log(message);
@@ -104,39 +87,4 @@ public class FocaNoAviao : MonoBehaviour
             }
         }
     }
-
-
-    // Método para focar em um avião específico da lista
-    /*public void FocarAviao(int index)
-    {
-        /*if (index >= 0 && index < listaAviao.Length)
-        {
-            aviaoAtual = listaAviao[index];
-        }
-        else
-        {
-            Debug.LogWarning("Índice inválido para a lista de aviões.");
-        }
-        if(aviaoInstanciado != null){
-            aviaoAtual = aviao001;
-        }
-    }*/
-
-    // private void TorpedoSegueAviao()
-    // {
-
-    //     transform.LookAt(aviaoAtual);
-    //     transform.LookAt(aviao002);
-    //     transform.LookAt(aviao003);
-
-    //     /*if (aviaoAtual != null)
-    //     {
-    //         transform.LookAt(aviaoAtual);
-    //     }*/
-    //     /*aviaoAtual = listaAviao[index];
-
-    //     transform.LookAt(aviaoAtual);*/
-    // }
-    //Teste Commit
-
 }
